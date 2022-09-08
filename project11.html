@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY Calculator</title>
+    <style>
+        .bod{
+            background-color: teal;
+        }
+        div{
+            margin: 10rem auto;
+            width: 20%;
+            box-shadow: 2px 2px 4px grey;
+            padding: 1rem;
+        }
+        p{
+            width: 80%;
+            border: thin solid rgb(199, 13, 13);
+            border: 1rem;
+            color: black;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: 900;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <button class="top">Click Me!!</button>
+    <div>
+        
+        <p id="demo"></p>
+    <button onclick="myFunction([40, 100, 1, 5, 25, 10, 45, 709,-67, 7800000, 987433453, -876, -1000, 800, 555, 43, 66, 57,300, 213, 900])">Second Max</button>
+    <button onclick="Maxnum([40, 100, 1, 5, 25, 10, 45, 709, 800, 555, 43, 66, -67, -876,- 1000, 57, 300, 213, 900,1000000, 8940000])">Maximum Number</button>
+    <button onclick="Sumnum([40, 100, 1, 5,])">Sum Total</button>
+    </div>
+<script>
+    //second max of array of numbers
+        // var points = [40, 100, 1, 5, 25, 10, 45, 709,800,555, 43, 66, 57,300, 213, 900];
+        // document.getElementById("demo").innerHTML = points;  
+        
+        // function myFunction() {
+        //   var mas = points.sort(function(a, b){return b - a});
+        //   var car = mas.slice(0);
+        //   //var car = mas.slice(-1, 0);
+        //   document.getElementById("demo").innerHTML = car[1];
+        // }
+        var top = document.querySelector(".top");
+        var p = document.querySelector("body")
+        top.addEventListener("click", function(){
+            p.classList.toggle("bod");
+        })
+        
+        document.write("<br><br>");
+        function myFunction(arr){
+            var net = arr.sort(function(a, b){return b - a});
+            var web = net.slice(0);
+            document.getElementById("demo").innerHTML = web[1];
+        }
+        document.write("<br><br>");
+        function Maxnum(arr){
+            var sad = arr.sort(function(a,b){return b-a});
+            document.getElementByInd("demo").innerHTML = sad[0];
+        }
+        document.write("<br><br>");
+        function Sumnum(arr){
+            var total = 0;
+            arr.forEach(element => {
+                total += element;
+            });
+            document.getElementById("demo").innerHTML = total;
+        }
+
+</script>
+</body>
+</html>
